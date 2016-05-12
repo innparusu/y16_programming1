@@ -75,3 +75,6 @@ print('スライムを倒した!')
     - サブ問題の方をレポートで解説してもよいかも(report1 の場合、 **if文**とはとか **関数定義** とはとか)
 - 最後に分割したものを結合
 
+## 使うと便利なもの
+- Freemind([Freemind download link](https://sourceforge.net/projects/freemind/)
+- markdown でまとめると便利 (実はこのファイルもmarkdown)
