@@ -78,3 +78,6 @@ print('スライムを倒した!')
 ## 使うと便利なもの
 - Freemind([Freemind download link](https://sourceforge.net/projects/freemind/)
 - markdown でまとめると便利 (実はこのファイルもmarkdown)
+- 教科書の索引を使う(index)を使う
+- その前にあるクイックリファレンスを使う
+- 自前で索引を使う
