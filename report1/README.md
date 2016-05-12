@@ -5,7 +5,7 @@
 - オブジェクトって?
     - Python のオブジェクトはデータを抽象的に表したもの
     - 言ってみれば ``1`` とかの数値も ``"hello"`` とかの文字列もすべてオブジェクト
-    - ![document:3.1 を参照](https://docs.python.org/3.5/reference/datamodel.html#objects-values-and-types)
+    - [document:3.1 を参照](https://docs.python.org/3.5/reference/datamodel.html#objects-values-and-types)
 - 変数って?
     - データを記憶するために名前をつけたもの
 
