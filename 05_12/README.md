@@ -76,7 +76,7 @@ print('スライムを倒した!')
 - 最後に分割したものを結合
 
 ## 使うと便利なもの
-- Freemind([Freemind download link](https://sourceforge.net/projects/freemind/)
+- Freemind([Freemind download link](https://sourceforge.net/projects/freemind/))
 - markdown でまとめると便利 (実はこのファイルもmarkdown)
 - 教科書の索引を使う(index)を使う
 - その前にあるクイックリファレンスを使う
