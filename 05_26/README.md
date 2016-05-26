@@ -118,7 +118,7 @@ def g():
 - 上のコメントはモジュールの **DESCRIPTION**  になる
 - ``def add`` のあとに書いているコメントは **FUNCTIONS** のドキュメントになる
 
-``` python3
+``` python
 """This is "week6_doctest" module.
 
 This module supplies one function, add(). For example,
