@@ -3,7 +3,11 @@
 import math
 import sys
 
-def parm(ary, r, element=None, out=None):
+def permutation(ary, r, element=None, out=None):
+    """ 順列を出す
+    >>> permutation([1,2,3,4], 2)
+    [[1, 2], [1, 3], [1, 4], [2, 1], [2, 3], [2, 4], [3, 1], [3, 2], [3, 4], [4, 1], [4, 2], [4, 3]]
+    """
     if (element is None):
         element = []
 
@@ -14,22 +18,13 @@ def parm(ary, r, element=None, out=None):
         out.append(element[:])
         return
 
-    for i in range(len(ary)):
+    for num in ary:
         ary_copy = ary[:]
         element_copy = element[:]
-        element_copy.append(ary_copy[i])
-        del ary_copy[i]
-        parm(ary_copy, r, element_copy, out)
+        element_copy.append(num)
+        ary_copy.remove(num)
+        permutation(ary_copy, r, element_copy, out)
     return out
-
-def permutation(ary, r):
-    """ 順列を出す
-    >>> permutation([1,2,3,4], 2)
-    [[1, 2], [1, 3], [1, 4], [2, 1], [2, 3], [2, 4], [3, 1], [3, 2], [3, 4], [4, 1], [4, 2], [4, 3]]
-    """
-    if (r > len(ary)):
-        return False
-    return parm(ary, r)
 
 def distance(x1, y1, x2, y2):
     """ 距離を求める
