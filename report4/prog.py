@@ -69,17 +69,9 @@ def calc_path_distance(path, city_list):
 def calc_min_path_distance(path_list, city_list):
     """ 与えられたpath_listとcity_listから最小の距離に成るものを求めるよ！
     """
-    min_distance = float('inf')
-    min_path = []
-    for path in path_list:
-        path     = [0] + path + [0]
-        print(path)
-        distance = calc_path_distance(path, city_list)
-        if (distance < min_distance):
-            min_distance = distance
-            min_path     = path
-
-    return (min_distance, min_path)
+    path_list = list(map(lambda path: [0]+path+[0], path_list))
+    path_distances = [(calc_path_distance(path, city_list), path) for path in path_list]
+    return min(path_distances, key=(lambda tumple: tumple[0]))
  
 def test(filename):
     city_num, city_list = read_city_file(filename)
