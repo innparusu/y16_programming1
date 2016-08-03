@@ -5,6 +5,8 @@ import sys
 
 def permutation(ary, r, element=None, out=None):
     """ 順列を出す
+    >>> permutation([1,2,3], 3)
+    [[1, 2, 3], [1, 3, 2], [2, 1, 3], [2, 3, 1], [3, 1, 2], [3, 2, 1]]
     >>> permutation([1,2,3,4], 2)
     [[1, 2], [1, 3], [1, 4], [2, 1], [2, 3], [2, 4], [3, 1], [3, 2], [3, 4], [4, 1], [4, 2], [4, 3]]
     """
@@ -19,11 +21,10 @@ def permutation(ary, r, element=None, out=None):
         return
 
     for num in ary:
-        ary_copy = ary[:]
-        element_copy = element[:]
-        element_copy.append(num)
-        ary_copy.remove(num)
-        permutation(ary_copy, r, element_copy, out)
+        if (num in element): continue
+        element.append(num)
+        permutation(ary, r, element, out)
+        element.pop()
     return out
 
 def distance(x1, y1, x2, y2):
@@ -45,7 +46,7 @@ def read_city_file(filename):
     with open(filename, 'r') as file:
         city_num = int(file.readline().strip())
         city_list = []
-        for line in file.readlines():
+        for line in file:
             city_point = list(map(int, line.strip().split(' ')))
             city_list.append(city_point)
     return (city_num, city_list)
